@@ -20,6 +20,23 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF136EB4)),
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          color: Color(0xFF136EB4),
+          iconTheme: IconThemeData(
+            color: Colors.white,
+          ),
+          titleTextStyle: TextStyle(
+            color: Colors.white
+          ),
+          
+        ),
+        textTheme: const TextTheme(
+          titleLarge: TextStyle(
+            color: Colors.white
+          ),
+        ),
+        toggleButtonsTheme: const ToggleButtonsThemeData(color: Color(0xFF136EB4)) 
+
       ),
       home: const MyHomePage(),
     );

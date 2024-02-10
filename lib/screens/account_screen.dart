@@ -1,3 +1,5 @@
+import 'package:dukaan/screens/additional_info.dart';
+import 'package:dukaan/screens/payments_screen.dart';
 import 'package:dukaan/widgets/divider.dart';
 import 'package:flutter/material.dart';
 
@@ -54,6 +56,8 @@ class AccountScreen extends StatelessWidget {
                 ],
               ),
             ),
+
+            divider(20),
  
             const ExpansionTile(title: Text('Account details'),
             leading: Icon(Icons.person),
@@ -70,21 +74,31 @@ class AccountScreen extends StatelessWidget {
             const ExpansionTile(title: Text('Joint Dukaan'),
             leading: Icon(Icons.group),
             ),
-            const ListTile(
-              title: Text('Payment Option'),
-              leading: Icon(Icons.paid),
-              trailing: Icon(Icons.navigate_next),
+             ListTile(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>const PaymentsScreen()));
+
+              },
+              title: const Text('Payments'),
+              leading: const Icon(Icons.payment_rounded),
+              trailing: const Icon(Icons.navigate_next),
             ),
             const ListTile(
+              
               title: Text('Help center'),
               leading: Icon(Icons.help),
               trailing: Icon(Icons.navigate_next),
             ),
-            const ListTile(
-              title: Text('Additional Information'),
-              leading: Icon(Icons.pending),
-              trailing: Icon(Icons.navigate_next),
+             ListTile(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>const AdditionalInfoScreen()));
+
+              },
+              title: const Text('Additional Information'),
+              leading: const Icon(Icons.pending),
+              trailing: const Icon(Icons.navigate_next),
             ),
+            divider(20),
 
             Container(
               padding: const EdgeInsets.all(10),

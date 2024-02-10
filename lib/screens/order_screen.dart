@@ -6,7 +6,9 @@ class OrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Order #16885'),
+      ),
       body: ListView(
         children: const [
           Row(

@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
           // const SizedBox(
           //   height: 20,
           // ),
-          divider(20),
+          divider(15),
 
           CarouselSlider(
             options: CarouselOptions(
@@ -203,7 +203,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
 
-          divider(20),
+          divider(15),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -224,14 +224,14 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
           ),
-          divider(20),
+          divider(10),
 
           visitWebCard(),
 
-          divider(20),
+       
 
           Padding(
-            padding: const EdgeInsets.all(12),
+            padding: const EdgeInsets.only(left: 12,right: 12),
             child: Column(
               children: [
                 Row(
@@ -259,7 +259,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                    divider(20),
+                    divider(10),
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
