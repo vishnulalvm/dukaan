@@ -7,7 +7,7 @@ class OrderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Order #16885'),
+        title: const Text('Order #16885'),
       ),
       body: ListView(
         children: const [

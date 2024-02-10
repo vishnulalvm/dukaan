@@ -59,7 +59,7 @@ class AdditionalInfoScreen extends StatelessWidget {
               ),
             ),
         
-            Column(
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text('version'),
