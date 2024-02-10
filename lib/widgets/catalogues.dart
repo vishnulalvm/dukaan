@@ -22,42 +22,40 @@ Widget buildListView(String tabName) {
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                width: 100,
-                                height: 100,
-                                color: Colors.grey,
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Product Name'),
-                                  Text('1 piece'),
-                                  Text('₹55'),
-                                  Text('in stock')
-                                ],
-                              ),
-                              SizedBox(
-                                width: 100,
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Icon(Icons.more_vert),
-                                  SizedBox(
-                                    height: 30,
-                                  ),
-                                  Switch(value: true, onChanged: (index) {})
-                                ],
-                              )
-                            ],
-                          ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              width: 100,
+                              height: 100,
+                              color: Colors.grey,
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Product Name'),
+                                Text('1 piece'),
+                                Text('₹55'),
+                                Text('in stock')
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 100,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                const Icon(Icons.more_vert),
+                                const SizedBox(
+                                  height: 30,
+                                ),
+                                Switch(value: true, onChanged: (index) {})
+                              ],
+                            )
+                          ],
                         ),
                         const Divider(
                           thickness: 1,
@@ -65,7 +63,7 @@ Widget buildListView(String tabName) {
                         ),
                         SizedBox(
                           width: MediaQuery.of(context).size.width,
-                          child: Row(
+                          child: const Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Icon(Icons.share),

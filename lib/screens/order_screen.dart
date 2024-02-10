@@ -8,7 +8,7 @@ class OrderScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: ListView(
-        children: [
+        children: const [
           Row(
             children: [
               Text("May 13/12/2033"),

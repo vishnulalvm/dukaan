@@ -14,7 +14,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
       appBar: AppBar(
         centerTitle: true,
         
-        actions: [Icon(Icons.search)],
+        actions: const [Icon(Icons.search)],
        backgroundColor: const Color(0xFF136EB4),
       title: const Text(
           'Orders',

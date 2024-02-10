@@ -4,6 +4,7 @@ import 'package:dukaan/screens/account_screen.dart';
 import 'package:dukaan/screens/manage_screen.dart';
 import 'package:dukaan/screens/orders_screen.dart';
 import 'package:dukaan/screens/products_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -21,7 +22,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyHomePage(),
-      
     );
   }
 }
@@ -87,5 +87,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-
