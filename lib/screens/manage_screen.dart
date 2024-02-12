@@ -7,7 +7,7 @@ class ManageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 231, 229, 229),
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
         centerTitle: true,
         actions: const [Icon(Icons.search)],

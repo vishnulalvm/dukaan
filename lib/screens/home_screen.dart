@@ -18,13 +18,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 231, 229, 229),
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: const Color(0xFF136EB4),
         title: const Text(
           'Homely',
           style: TextStyle(
-              color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),
+              color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600),
         ),
         actions: [
           Container(
@@ -274,10 +274,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ],
-                )
+                ),
+
               ],
             ), //column for bellow over view
           ),
+          divider(100)
         ],
       ),
     );

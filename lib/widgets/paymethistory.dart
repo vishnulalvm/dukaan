@@ -1,3 +1,4 @@
+import 'package:dukaan/widgets/divider.dart';
 import 'package:flutter/material.dart';
 
 class PaymentHistory extends StatelessWidget {
@@ -10,7 +11,7 @@ class PaymentHistory extends StatelessWidget {
       child: Container(
         color: Colors.white,
         width: MediaQuery.of(context).size.width,
-        height: 170,
+        height: 100,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -19,9 +20,13 @@ class PaymentHistory extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    width: 100,
-                    height: 100,
+                    width: 80,
+                    height: 80,
                     color: Colors.grey,
+                    child: Image.network(
+                      'https://insanelygoodrecipes.com/wp-content/uploads/2023/01/Fresh-Organic-Tangerine-Oranges-with-Leaves.jpg',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   const SizedBox(
                     width: 20,
@@ -34,29 +39,25 @@ class PaymentHistory extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    width: 100,
+                    width: 80,
                   ),
-                  Column(
+                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       const Icon(Icons.more_vert),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      Switch(value: true, onChanged: (index) {})
+                      divider(10),
+                      const Row(
+                        children: [
+                          Icon(Icons.circle,color: Colors.blue,size: 16,),
+                          Text('Successful'),
+                        ],
+                      )
+
                     ],
                   )
                 ],
               ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: const Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text('Share Product'),
-                  ],
-                ),
-              )
             ],
           ),
         ),

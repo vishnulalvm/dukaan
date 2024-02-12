@@ -29,7 +29,7 @@ Widget manageCard({
             height: 50,
             child: Icon(
               icon,
-              size: 40,
+              size: 30,
               color: Colors.white,
             ),
           ),

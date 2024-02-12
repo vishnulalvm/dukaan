@@ -25,10 +25,10 @@ Widget buildListView(String tabName) {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
+                            SizedBox(
                               width: 100,
                               height: 100,
-                              color: Colors.grey,
+                              child: Image.network('https://yogisorganic.com/cdn/shop/products/Pineapple_600x@2x.jpg?v=1496866405'),
                             ),
                             const SizedBox(
                               width: 20,
@@ -61,16 +61,21 @@ Widget buildListView(String tabName) {
                           thickness: 1,
                           color: Colors.grey,
                         ),
-                        SizedBox(
+                        Container(
                           width: MediaQuery.of(context).size.width,
+                         
+                          alignment: Alignment.center,
                           child: const Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
+                            
                             children: [
                               Icon(Icons.share),
                               Text('Share Product'),
                             ],
                           ),
                         )
+
+
+                        
                       ],
                     ),
                   ),
@@ -81,10 +86,10 @@ Widget buildListView(String tabName) {
         ),
         
       ),
-      FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
-      ),
+      // FloatingActionButton(
+      //   onPressed: () {},
+      //   child: const Icon(Icons.add),
+      // ),
     ],
   );
 }

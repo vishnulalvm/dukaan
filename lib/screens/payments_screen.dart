@@ -2,6 +2,7 @@ import 'package:dukaan/widgets/divider.dart';
 import 'package:dukaan/widgets/paymethistory.dart';
 import 'package:flutter/material.dart';
 
+
 class PaymentsScreen extends StatelessWidget {
   const PaymentsScreen({super.key});
 
@@ -15,7 +16,12 @@ class PaymentsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Payments'),
+        title: const Text(
+          'Payments',
+          style: TextStyle(
+            fontSize: 20,
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 15, right: 15, top: 20),
@@ -35,8 +41,7 @@ class PaymentsScreen extends StatelessWidget {
                 children: [
                   const Text(
                     'Transation Limit',
-                    style: TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.w500),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                   ),
                   divider(10),
                   const Text(
@@ -67,14 +72,13 @@ class PaymentsScreen extends StatelessWidget {
                       height: 50,
                       decoration: const BoxDecoration(
                         color: Color(0xFF136EB4),
-                        borderRadius:
-                            BorderRadius.all(Radius.circular(10)),
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
                       ),
                       child: const Text(
                         'Increase limit',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 18,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
@@ -83,18 +87,18 @@ class PaymentsScreen extends StatelessWidget {
               ),
             ),
             divider(25),
-            paymetOption('Default Method', 'Online Payments',
-                Icons.arrow_forward_ios),
+            paymetOption(
+                'Default Method', 'Online Payments', Icons.arrow_forward_ios),
             divider(25),
-            paymetOption('Payment Profile', 'Bank Account',
-                Icons.arrow_forward_ios),
+            paymetOption(
+                'Payment Profile', 'Bank Account', Icons.arrow_forward_ios),
             divider(15),
             const Divider(
               thickness: 1,
             ),
             divider(25),
-            paymetOption('Payment Overview', 'Life Time',
-                Icons.keyboard_arrow_down),
+            paymetOption(
+                'Payment Overview', 'Life Time', Icons.keyboard_arrow_down),
             divider(20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -103,6 +107,13 @@ class PaymentsScreen extends StatelessWidget {
                 paymentOverview('Amount Recived', '₹13400', Colors.green),
               ],
             ),
+            divider(20),
+
+            const Text('Transactions',style: TextStyle(
+              fontSize: 20,fontWeight: FontWeight.w500
+            ),),
+
+
             divider(20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -118,9 +129,14 @@ class PaymentsScreen extends StatelessWidget {
                 ElevatedButton(onPressed: () {}, child: const Text('Refunds')),
               ],
             ),
+            divider(15),
+            
             const PaymentHistory(),
+            const Divider(),
             const PaymentHistory(),
-             const PaymentHistory(),
+            const Divider(),
+            const PaymentHistory(),
+            const Divider(),
             const PaymentHistory(),
           ],
         ),
@@ -134,7 +150,7 @@ class PaymentsScreen extends StatelessWidget {
       children: [
         Text(
           title,
-          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
         ),
         SizedBox(
           child: Row(
@@ -143,7 +159,7 @@ class PaymentsScreen extends StatelessWidget {
                 payment,
                 style: const TextStyle(
                     color: Colors.grey,
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: FontWeight.w400),
               ),
               Icon(icon),
